@@ -15,13 +15,14 @@ public class Dash : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        dashDuration = dashDistance / dashSpeed;
+        
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            dashDuration = dashDistance / dashSpeed;
             movementEnable = false;
             StartDash();
         }

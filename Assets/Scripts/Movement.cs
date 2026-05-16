@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -25,9 +26,15 @@ public class Movement : MonoBehaviour
         
         float moveInput = 0f;
         if (Input.GetKey(KeyCode.A))
+        {
             moveInput = -1f;
+            transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
+        }
         else if (Input.GetKey(KeyCode.D))
-            moveInput = 1f;
+        {   
+            moveInput = 1f;    
+            transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
+        }    
 
         
         targetSpeed = moveInput * maxSpeed;
@@ -40,5 +47,6 @@ public class Movement : MonoBehaviour
     {
        if(dash.movementEnable)
        rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
+       
     }
 }
