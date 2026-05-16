@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     public float accelerationTime = 0.5f; 
 
     private Rigidbody2D rb;
+    private Dash dash;
     private float acceleration; 
     private float targetSpeed;
     private float currentSpeed;
@@ -14,6 +15,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dash = GetComponent<Dash>();
         
         acceleration = maxSpeed / accelerationTime;
     }
@@ -36,7 +38,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
+       if(dash.movementEnable)
+       rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
     }
 }

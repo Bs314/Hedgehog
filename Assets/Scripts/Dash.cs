@@ -1,69 +1,57 @@
 using UnityEngine;
-using System.Collections;
 
 public class Dash : MonoBehaviour
 {
-     [Header("Dash Settings")]
-    [SerializeField] private float dashSpeed = 20f;
-    [SerializeField] private float dashDistance = 5f;
-    [SerializeField] private float dashCooldown = 2f;
+   [Header("Dash Settings")]
+    public float dashSpeed = 20f;       // Dash speed
+    public float dashDistance = 5f;     // Dash distance
+    public float dashCooldown = 2f;     // Cooldown duration
 
     private Rigidbody2D rb;
-
     private bool canDash = true;
-    private bool isDashing = false;
+    public bool movementEnable = true;
+    private float dashDuration;
 
-    private Vector2 dashDirection;
-
-    private void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dashDuration = dashDistance / dashSpeed;
     }
 
-    private void Update()
+    void Update()
     {
-        // Shift basınca dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            StartCoroutine(Dassh());
+            movementEnable = false;
+            StartDash();
         }
     }
 
-    private IEnumerator Dassh()
+    void StartDash()
     {
         canDash = false;
-        isDashing = true;
 
-        // Hareket yönünü al
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        dashDirection = new Vector2(moveX, moveY).normalized;
-
-        // Eğer input yoksa karakterin baktığı yön
-        if (dashDirection == Vector2.zero)
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (horizontalInput == 0f)
         {
-            dashDirection = Vector2.right * transform.localScale.x;
+            horizontalInput = transform.localScale.x > 0 ? 1f : -1f;
         }
 
-        // Dash süresi = mesafe / hız
-        float dashTime = dashDistance / dashSpeed;
+        // Yeni API: linearVelocity
+        rb.linearVelocity = new Vector2(horizontalInput * dashSpeed, rb.linearVelocity.y);
 
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
+        Invoke(nameof(EndDash), dashDuration);
+        Invoke(nameof(ResetDash), dashCooldown);
+    }
 
-        rb.linearVelocity = dashDirection * dashSpeed;
+    void EndDash()
+    {
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        movementEnable = true;
+    }
 
-        yield return new WaitForSeconds(dashTime);
-
-        rb.linearVelocity = Vector2.zero;
-        rb.gravityScale = originalGravity;
-
-        isDashing = false;
-
-        // Cooldown
-        yield return new WaitForSeconds(dashCooldown);
-
+    void ResetDash()
+    {
         canDash = true;
     }
 }
