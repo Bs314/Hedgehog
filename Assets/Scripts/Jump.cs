@@ -86,4 +86,9 @@ public class Jump : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
+
+    public void ActivateDoubleJump()
+    {
+        doubleJump = true;
+    }
 }
