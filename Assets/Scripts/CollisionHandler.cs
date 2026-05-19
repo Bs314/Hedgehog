@@ -11,6 +11,13 @@ public class CollisionHandler : MonoBehaviour
 
             Invoke("ReloadScene",0.5f);
         }
+
+        if(collision.tag == "Enemy")
+        {
+            Debug.Log("die");
+
+            Invoke("ReloadScene",0.5f);
+        }
     }
 
     void ReloadScene()

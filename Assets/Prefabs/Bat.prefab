@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6260963130067683600}
   - component: {fileID: 8354359711223675642}
   - component: {fileID: 3187127053929494453}
-  - component: {fileID: 3001761460127751233}
+  - component: {fileID: 992416553059245849}
   m_Layer: 8
   m_Name: Bat
   m_TagString: Enemy
@@ -119,7 +119,7 @@ MonoBehaviour:
   detectionThreshold: 5
   checkInterval: 0.2
   chaseSpeed: 4
-  animator: {fileID: 3001761460127751233}
+  animator: {fileID: 992416553059245849}
 --- !u!70 &3187127053929494453
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.049999952}
   m_Size: {x: 0.80000305, y: 1.2999997}
   m_Direction: 0
---- !u!95 &3001761460127751233
+--- !u!95 &992416553059245849
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ Animator:
   m_GameObject: {fileID: 1379794008025057598}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed614013fd49e15408fec90ac0bbcda7, type: 2}
+  m_Controller: {fileID: 9100000, guid: de0a76edec50e1f48aa02abbf056abac, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

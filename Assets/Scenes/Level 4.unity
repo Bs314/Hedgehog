@@ -526,8 +526,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 2240405720426335448, guid: 045171e71cdd31e4985b56341c8c06c7, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 4910618822342070949, guid: 045171e71cdd31e4985b56341c8c06c7, type: 2}
-    value: {fileID: 1250392354}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &164558547
@@ -629,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 195399590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0, z: 0}
+  m_LocalPosition: {x: -58.5, y: 37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1141,7 +1139,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -1206,7 +1204,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4392809217384111793, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_Name
@@ -1604,7 +1602,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4392809217384111793, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_Name
@@ -2159,7 +2157,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -2324,7 +2322,7 @@ Transform:
   m_GameObject: {fileID: 570141993}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.233, y: 1, z: -10}
+  m_LocalPosition: {x: -39.233, y: 23.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2578,7 +2576,7 @@ Transform:
   m_GameObject: {fileID: 619550016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74, y: 1, z: 0}
+  m_LocalPosition: {x: -40, y: 23.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2652,7 +2650,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619550016}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26a27b4d832ec524d959f2188ce52eee, type: 3}
   m_Name: 
@@ -2753,7 +2751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -3146,7 +3144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4392809217384111793, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_Name
@@ -3898,7 +3896,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -4639,7 +4637,7 @@ PrefabInstance:
       objectReference: {fileID: 1165590791}
     - target: {fileID: 3858670790941530150, guid: bf86f09fde3fbee47ae35f7533834af3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.05537
+      value: -7.5553703
       objectReference: {fileID: 0}
     - target: {fileID: 3858670790941530150, guid: bf86f09fde3fbee47ae35f7533834af3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4819,11 +4817,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1323931203638948519, guid: 742a3f0909968e44290a48338f1b7cbd, type: 3}
   m_PrefabInstance: {fileID: 1249327715}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1250392354 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9122160504499529891, guid: 61cdcb021db3da74ead098d270d8366e, type: 3}
-  m_PrefabInstance: {fileID: 7673470466438565131}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1251875862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3622801007726881153, guid: 7e863d18ba8440f4580c72a17c537386, type: 3}
@@ -4961,7 +4954,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -5723,7 +5716,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -5788,7 +5781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3078883172212388565, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: delay
@@ -6125,7 +6118,7 @@ Transform:
   m_GameObject: {fileID: 1636117351}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.60384, y: 3.7499099, z: -10}
+  m_LocalPosition: {x: -39.233, y: 23.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12424,7 +12417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4392809217384111793, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_Name
@@ -12583,7 +12576,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756930520113702510, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_TagString
-      value: Damage
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4392809217384111793, guid: e330623e33cd16b46b84e280df01e0f2, type: 3}
       propertyPath: m_Name

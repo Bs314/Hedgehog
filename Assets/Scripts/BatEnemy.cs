@@ -19,7 +19,7 @@ public class BatEnemy : MonoBehaviour
     public float detectionThreshold = 5f;
     public float checkInterval = 0.5f;
     public float chaseSpeed = 3f;
-    public Animator animator;
+    
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class BatEnemy : MonoBehaviour
         batChasing.SetActive(false);
         leftWing.SetActive(false);
         rightWing.SetActive(false);
-
+        GetComponent<Animator>().enabled = false;
         InvokeRepeating(nameof(CheckDistanceToPlayer), checkInterval, checkInterval);
     }
 
@@ -42,7 +42,7 @@ public class BatEnemy : MonoBehaviour
             batChasing.SetActive(true);
             leftWing.SetActive(true);
             rightWing.SetActive(true);
-            animator.enabled = true;
+            GetComponent<Animator>().enabled = true;
             currentState = BatState.Chase;
             CancelInvoke(nameof(CheckDistanceToPlayer));
             StartCoroutine(ChaseRoutine());
