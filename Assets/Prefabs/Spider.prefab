@@ -102,9 +102,9 @@ GameObject:
   - component: {fileID: 7327248434134849451}
   - component: {fileID: 2478554962135203503}
   - component: {fileID: 3711648686645914948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
-  m_TagString: Spider
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,9 +602,9 @@ GameObject:
   - component: {fileID: 6407396069046214786}
   - component: {fileID: 5802007789177444703}
   - component: {fileID: 3078883172212388565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

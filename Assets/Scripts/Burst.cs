@@ -3,8 +3,13 @@ using UnityEngine;
 public class Burst : MonoBehaviour
 {
     [Header("Particle Settings")]
-    public ParticleSystem burstEffect;   // Player içindeki particle effect
-    public float burstInterval = 0.5f;   // Kaç saniyede bir patlama olacak (Inspector’dan ayarlanabilir)
+    public ParticleSystem burstEffect;   
+    public float burstInterval = 0.5f;   
+    
+    [Header("Damage Settings")]
+    public float radius = 5f;        
+    public int damage = 10;          
+    public LayerMask enemyLayer;     
 
     private float burstTimer;
 
@@ -27,9 +32,34 @@ public class Burst : MonoBehaviour
 
     void PlayBurst()
     {
+        DoAreaDamage();
         if (burstEffect != null)
         {
             burstEffect.Play();
         }
+    }
+
+    void DoAreaDamage()
+    {
+        // Belirtilen yarıçapta düşmanları bul
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, radius, enemyLayer);
+
+        foreach (Collider2D enemy in enemies)
+        {
+
+            Destroy(enemy.gameObject);
+            Animator enemyAnimator = enemy.transform.parent.GetComponent<Animator>();
+            if(enemyAnimator!=null)
+            {
+                enemyAnimator.enabled = false;
+            }
+            
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, radius);    
     }
 }

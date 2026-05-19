@@ -5,7 +5,7 @@ public class CollisionHandler : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Spikes" || collision.tag == "Spider")
+        if(collision.tag == "Damage")
         {
             Debug.Log("die");
 
