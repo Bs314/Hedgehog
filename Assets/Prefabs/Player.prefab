@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 532557351309139936}
   - component: {fileID: 8593867289965508064}
   m_Layer: 0
-  m_Name: Hedgehog_3
+  m_Name: Hedgehog_left_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 50266480154014840}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23000006, y: -0.01700005, z: 0}
+  m_LocalPosition: {x: 0.2300001, y: -0.01700005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 8016647640012915778}
   - component: {fileID: 2255757486299459886}
   m_Layer: 0
-  m_Name: Hedgehog_2
+  m_Name: Hedgehog_right_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 2305584605153887480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.036000066, y: 0.0019999593, z: 0}
+  m_LocalPosition: {x: 0.03600007, y: 0.0019999593, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 2681765929397488958}
   - component: {fileID: 8442492605375050693}
   m_Layer: 0
-  m_Name: Hedgehog_0
+  m_Name: Hedgehog_back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,13 +207,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3234771343532260399}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.131, y: 0.226, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.12247498, w: 0.99247164}
+  m_LocalPosition: {x: -0.0763011, y: 0.24062037, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8632209006382001592}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.07}
 --- !u!212 &8442492605375050693
 SpriteRenderer:
   serializedVersion: 2
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 6778586898499003323}
   - component: {fileID: 6774531852230488017}
   m_Layer: 0
-  m_Name: Hedgehog_5
+  m_Name: Hedgehog_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 3412233990377078364}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.068000175, y: -0.10200004, z: 0}
+  m_LocalPosition: {x: 0.06800018, y: -0.10200004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 2672544118974883111}
   - component: {fileID: 7333494763043213726}
   m_Layer: 0
-  m_Name: Hedgehog_1
+  m_Name: Hedgehog_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,13 +389,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3717592185604723389}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19100018, y: 0.30399996, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.12247498, w: 0.99247164}
+  m_LocalPosition: {x: 0.255, y: 0.238, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8632209006382001592}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.07}
 --- !u!212 &7333494763043213726
 SpriteRenderer:
   serializedVersion: 2
@@ -473,6 +473,8 @@ GameObject:
   - component: {fileID: 1346947125887778899}
   - component: {fileID: 3043477910488737423}
   - component: {fileID: 4633825396875436839}
+  - component: {fileID: 8960835844896267348}
+  - component: {fileID: 7057558011809789913}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -498,11 +500,11 @@ Transform:
   - {fileID: 7666502721720987762}
   - {fileID: 2681765929397488958}
   - {fileID: 2672544118974883111}
+  - {fileID: 6778586898499003323}
   - {fileID: 8016647640012915778}
   - {fileID: 532557351309139936}
-  - {fileID: 3210828201111715183}
   - {fileID: 5001364273664307328}
-  - {fileID: 6778586898499003323}
+  - {fileID: 3210828201111715183}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2041458559237334546
@@ -694,7 +696,7 @@ MonoBehaviour:
   spikePrefab: {fileID: 7831693035399560166, guid: 4d1f157e4ad92f9488cd7380f4e7c54d, type: 3}
   spawnPoint: {fileID: 7666502721720987762}
   fireRate: 1
-  rayDistance: 30
+  rayDistance: 60
   hitLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -717,6 +719,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
+  animator: {fileID: 7057558011809789913}
 --- !u!114 &4633825396875436839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +732,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd1d651e9ca4064d8b1c77999dc2372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  reloadDelay: 2
+--- !u!114 &8960835844896267348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104765056663644350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee6c3bce05727947b1637bf7197964f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenFade
+  blackImage: {fileID: 0}
+  fadeDuration: 2
+--- !u!95 &7057558011809789913
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104765056663644350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9e6a3c6ebd99ad4fb1b91ef2e1e1685, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4635745243436378915
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +780,7 @@ GameObject:
   - component: {fileID: 5001364273664307328}
   - component: {fileID: 1685522905917898139}
   m_Layer: 0
-  m_Name: Hedgehog_4 (1)
+  m_Name: Hedgehog_right_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,7 +872,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpikeShooter
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -862,7 +902,7 @@ GameObject:
   - component: {fileID: 3210828201111715183}
   - component: {fileID: 7820137315470017938}
   m_Layer: 0
-  m_Name: Hedgehog_4
+  m_Name: Hedgehog_left_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

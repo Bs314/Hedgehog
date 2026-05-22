@@ -11,9 +11,12 @@ public class Dash : MonoBehaviour
     private bool canDash = true;
     public bool movementEnable = true;
     private float dashDuration;
+    Animator animator;
+
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         
     }
@@ -38,7 +41,7 @@ public class Dash : MonoBehaviour
             horizontalInput = transform.localScale.x > 0 ? 1f : -1f;
         }
 
-        // Yeni API: linearVelocity
+        animator.SetTrigger("isDash");
         rb.linearVelocity = new Vector2(horizontalInput * dashSpeed, rb.linearVelocity.y);
 
         Invoke(nameof(EndDash), dashDuration);

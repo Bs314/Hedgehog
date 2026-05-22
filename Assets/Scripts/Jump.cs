@@ -21,9 +21,11 @@ public class Jump : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
+    Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -31,6 +33,7 @@ public class Jump : MonoBehaviour
     {
         // Ground check with OverlapCircle
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        animator.SetBool("isGrounded",isGrounded);
 
         if (isGrounded)
         {
@@ -76,6 +79,7 @@ public class Jump : MonoBehaviour
 
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * appliedForce, ForceMode2D.Impulse);
+        
     }
 
     void OnDrawGizmos()

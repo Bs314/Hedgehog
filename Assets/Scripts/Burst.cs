@@ -12,6 +12,7 @@ public class Burst : MonoBehaviour
     public LayerMask enemyLayer;     
 
     private float burstTimer;
+    public Animator animator;
 
     void Update()
     {
@@ -21,7 +22,13 @@ public class Burst : MonoBehaviour
             {
                 PlayBurst();
                 burstTimer = burstInterval;
+                animator.SetBool("isBurst",true);
             }
+        
+        }
+        if(Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            animator.SetBool("isBurst",false);    
         }
 
         if (burstTimer > 0f)

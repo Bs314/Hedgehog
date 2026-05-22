@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -11,13 +12,14 @@ public class Movement : MonoBehaviour
     private float acceleration; 
     private float targetSpeed;
     private float currentSpeed;
-
+    private Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         dash = GetComponent<Dash>();
         
         acceleration = maxSpeed / accelerationTime;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -28,12 +30,19 @@ public class Movement : MonoBehaviour
         {
             moveInput = -1f;
             transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
+            
         }
         else if (Input.GetKey(KeyCode.D))
         {   
+
             moveInput = 1f;    
             transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
+            
         }    
+        else
+        {
+            
+        }
 
         
         targetSpeed = moveInput * maxSpeed;
@@ -46,6 +55,9 @@ public class Movement : MonoBehaviour
     {
        if(dash.movementEnable)
        rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
+       animator.SetFloat("speed",math.abs(currentSpeed));
+
+       
        
     }
 }

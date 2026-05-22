@@ -36,7 +36,7 @@ public class SpikeShooter : MonoBehaviour
             Vector2 targetPoint = hit.point;
 
             GameObject spike = Instantiate(spikePrefab, spawnPoint.position, Quaternion.identity);
-
+            GetComponent<Animator>().SetTrigger("isShoot");
             
             SpikeMover mover = spike.GetComponent<SpikeMover>();
             if (mover != null)
