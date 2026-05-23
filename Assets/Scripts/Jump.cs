@@ -13,6 +13,7 @@ public class Jump : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private bool isDropSoundPlayed = true;
     private bool canDoubleJump;
     private float coyoteTimeCounter;
     private float jumpBufferCounter;
@@ -21,10 +22,13 @@ public class Jump : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-    Animator animator;
 
+    public AudioClip dropSound;
+    Animator animator;
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -37,15 +41,23 @@ public class Jump : MonoBehaviour
 
         if (isGrounded)
         {
+
+            if(!isDropSoundPlayed)
+            {
+                audioSource.PlayOneShot(dropSound);
+                isDropSoundPlayed = true;
+            }
+            
             coyoteTimeCounter = coyoteTime;
             canDoubleJump = true;
         }
         else
         {
+            isDropSoundPlayed = false;
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             jumpBufferCounter = jumpBufferTime;
         }
@@ -61,6 +73,7 @@ public class Jump : MonoBehaviour
         }
         else if (jumpBufferCounter > 0 && doubleJump && canDoubleJump && !isGrounded)
         {
+            
             PerformJump();
             canDoubleJump = false;
             jumpBufferCounter = 0;
@@ -69,6 +82,7 @@ public class Jump : MonoBehaviour
 
     void PerformJump()
     {
+        
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float appliedForce = jumpForce;
 
@@ -79,6 +93,7 @@ public class Jump : MonoBehaviour
 
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * appliedForce, ForceMode2D.Impulse);
+        
         
     }
 

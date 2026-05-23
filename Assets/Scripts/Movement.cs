@@ -26,13 +26,13 @@ public class Movement : MonoBehaviour
     {
         
         float moveInput = 0f;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             moveInput = -1f;
             transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
             
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {   
 
             moveInput = 1f;    
