@@ -4,7 +4,10 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
 
-    public float reloadDelay = 2f;
+    private Vector3 respawnPoint;
+    private bool isRespawn = false;
+    public static bool isDeath = false; 
+    public float reloadDelay = 2.1f;
     PlayerSoundManager playerSoundManager;
     void Start()
     {
@@ -12,41 +15,48 @@ public class CollisionHandler : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Damage")
+        if((collision.tag == "Damage" || collision.tag == "Enemy") && isDeath == false)
         {
-
             Debug.Log("die");
-            DisableMovements();
-            Invoke("ReloadScene",reloadDelay);
-            
+            GetComponent<ScreenFade>().StartFadeOut();
+            isDeath = true;
+            playerSoundManager.PlayDeathSounds();
+            GetComponent<Animator>().SetTrigger("isDeath");
+            GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;     
+            Invoke("ReloadScene",reloadDelay);    
             
         }
 
-        if(collision.tag == "Enemy")
+        if(collision.tag == "RespawnPoint")
         {
-            Debug.Log("die");
-            DisableMovements();
-            Invoke("ReloadScene",reloadDelay);
+            Debug.Log("Checkpoint");
+            isRespawn = true;
+            respawnPoint = collision.transform.position;
+            collision.GetComponent<Animator>().SetTrigger("Activated");
         }
     }
 
     void ReloadScene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);    
+        if(isRespawn)
+        {
+            isDeath = false;  
+            transform.position = respawnPoint;   
+            GetComponent<Animator>().SetTrigger("respawn");   
+            GetComponent<ScreenFade>().StartFadeIn();
+            
+        }
+        else
+        {
+            isDeath = false;
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex); 
+        }
+           
     }
 
-    void DisableMovements()
-    {
-        playerSoundManager.PlayDeathSounds();
-        GetComponent<Animator>().SetTrigger("isDeath");
-        GetComponent<Movement>().enabled = false;
-        GetComponent<Dash>().enabled = false;
-        GetComponent<Jump>().enabled = false;
-        GetComponent<SpikeShooter>().enabled = false;
-        GetComponent<Burst>().enabled = false;
-        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-        GetComponent<ScreenFade>().StartFadeOut();
+    
 
-    }
+    
+
 }

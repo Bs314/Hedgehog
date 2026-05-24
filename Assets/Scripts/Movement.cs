@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     private float targetSpeed;
     private float currentSpeed;
     private Animator animator;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,19 +21,21 @@ public class Movement : MonoBehaviour
         
         acceleration = maxSpeed / accelerationTime;
         animator = GetComponent<Animator>();
+        
+
     }
 
     void Update()
     {
         
         float moveInput = 0f;
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !CollisionHandler.isDeath)
         {
             moveInput = -1f;
             transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
             
         }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !CollisionHandler.isDeath)
         {   
 
             moveInput = 1f;    

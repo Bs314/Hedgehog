@@ -639,7 +639,7 @@ Animator:
   m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6eaf311cc22d32c46876a2cc7683cdb5, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -678,7 +678,6 @@ MonoBehaviour:
   deathPartickles: {fileID: 1692765226257161687}
   pngList:
   - {fileID: 756930520113702510}
-  deathSound: {fileID: 8300000, guid: 583f2fbb0b0f45642ad55263c3dd6b70, type: 3}
 --- !u!1 &4869773495820943271
 GameObject:
   m_ObjectHideFlags: 0

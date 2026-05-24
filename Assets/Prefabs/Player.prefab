@@ -262,7 +262,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 565521202965635644, guid: a9935ec1e015ac045acb964908eb4f53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -477,7 +477,9 @@ GameObject:
   - component: {fileID: 8960835844896267348}
   - component: {fileID: 7057558011809789913}
   - component: {fileID: 2138804675408409446}
+  - component: {fileID: 497024894204403328}
   - component: {fileID: 7394131658040632236}
+  - component: {fileID: 7906701247453972463}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -793,6 +795,18 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 924ec0d811453784e9687e8af2f2cc8f, type: 3}
   dashSound: {fileID: 8300000, guid: a83546a97d7e3654494e3252b3aad05e, type: 3}
   deathSound: {fileID: 8300000, guid: 583f2fbb0b0f45642ad55263c3dd6b70, type: 3}
+--- !u!114 &497024894204403328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104765056663644350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5601c88f1587f4449a5ac8f1fc05c647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!82 &7394131658040632236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -890,6 +904,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7906701247453972463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104765056663644350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
+  m_Events:
+    m_Signals: []
+    m_Events: []
 --- !u!1 &4635745243436378915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1089,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -20
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2404134409272837211, guid: 20371c77bcb1d4549b19772717d933ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

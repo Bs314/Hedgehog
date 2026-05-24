@@ -22,7 +22,7 @@ public class Burst : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftControl))
+        if ((Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftControl)) && !CollisionHandler.isDeath)
         {
             if (burstTimer <= 0f)
             {

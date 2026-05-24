@@ -13,7 +13,7 @@ public class SpikeShooter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && !CollisionHandler.isDeath)
         {
             if (fireTimer <= 0f)
             {
