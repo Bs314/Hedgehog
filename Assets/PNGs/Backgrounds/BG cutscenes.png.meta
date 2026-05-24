@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: bdcac65406f99154ea15dc77a2534c47
+guid: 031127709d62b2d469dd4dc724bc47f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1958676783162264248
-    second: PlayButton_0
+      213: -6236957392214832055
+    second: BG cutscenes_0
+  - first:
+      213: 3465716651644842014
+    second: BG cutscenes_1
+  - first:
+      213: -4949915982810927405
+    second: BG cutscenes_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,23 +158,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayButton_0
+      name: BG cutscenes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1369
-        height: 485
+        x: 135
+        y: 2238
+        width: 5240
+        height: 824
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 845fecdd7d161d4e0800000000000000
-      internalID: -1958676783162264248
+      spriteID: 94cc9cdeb40e179a0800000000000000
+      internalID: -6236957392214832055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG cutscenes_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1201
+        width: 4229
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e107279bee2b81030800000000000000
+      internalID: 3465716651644842014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG cutscenes_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 4651
+        height: 878
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dea680b3ad5e4bb0800000000000000
+      internalID: -4949915982810927405
       vertices: []
       indices: 
       edges: []
@@ -177,7 +227,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cbff7797385b3f640a2abc785d0a97b7
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayButton_0: -1958676783162264248
+      BG cutscenes_0: -6236957392214832055
+      BG cutscenes_1: 3465716651644842014
+      BG cutscenes_2: -4949915982810927405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
