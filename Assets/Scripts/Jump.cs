@@ -57,7 +57,7 @@ public class Jump : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !CollisionHandler.isDeath)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && !CollisionHandler.isDeath && !TimelineSignal.freezePlayer)
         {
             jumpBufferCounter = jumpBufferTime;
         }

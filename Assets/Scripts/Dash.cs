@@ -23,7 +23,7 @@ public class Dash : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !CollisionHandler.isDeath)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !CollisionHandler.isDeath && !TimelineSignal.freezePlayer)
         {
             dashDuration = dashDistance / dashSpeed;
             movementEnable = false;

@@ -29,13 +29,13 @@ public class Movement : MonoBehaviour
     {
         
         float moveInput = 0f;
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !CollisionHandler.isDeath)
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !CollisionHandler.isDeath && !TimelineSignal.freezePlayer)
         {
             moveInput = -1f;
             transform.localScale = new Vector3(moveInput, transform.localScale.y, transform.localScale.z);
             
         }
-        else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !CollisionHandler.isDeath)
+        else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !CollisionHandler.isDeath && !TimelineSignal.freezePlayer)
         {   
 
             moveInput = 1f;    
