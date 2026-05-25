@@ -1,12 +1,17 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class SpikeMover : MonoBehaviour
 {
     public float moveSpeed = 5f; // Lerp speed (Inspector’dan ayarlanabilir)
     public float spikeDestroyTime = 5f;
     public PolygonCollider2D  pc2d;
+    public AudioSource audioSource;
+    public AudioClip stickSound;
+    public CinemachineImpulseSource cinemachineImpulseSource;
     private Vector2 targetPoint;
     private bool hasTarget = false;
+    private bool isShaked = false;
 
     public void SetTarget(Vector2 point)
     {
@@ -28,19 +33,20 @@ public class SpikeMover : MonoBehaviour
             }
             else
             {
+                if(isShaked == false)
+                {
+                    isShaked = true;
+                    cinemachineImpulseSource.GenerateImpulse(); 
+                    audioSource.PlayOneShot(stickSound);
+                    
+                }
+                
                 pc2d.isTrigger = false;
                 Destroy(gameObject, spikeDestroyTime);
             }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Enemy")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-    }
+    
 
 }

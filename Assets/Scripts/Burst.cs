@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class Burst : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class Burst : MonoBehaviour
     public int damage = 10;          
     public LayerMask enemyLayer;     
 
+    public CinemachineImpulseSource cinemachineImpulseSource;
     private float burstTimer;
     public Animator animator;
     public AudioClip bugSmashSound;
+    public AudioClip burstSound;
     AudioSource audioSource;
 
     void Start()
@@ -48,6 +51,8 @@ public class Burst : MonoBehaviour
         DoAreaDamage();
         if (burstEffect != null)
         {
+            audioSource.PlayOneShot(burstSound);
+            cinemachineImpulseSource.GenerateImpulse();
             burstEffect.Play();
         }
     }

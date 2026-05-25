@@ -160,7 +160,6 @@ MonoBehaviour:
   - {fileID: 6010306162922908483}
   - {fileID: 2920172175495604394}
   - {fileID: 2346974575070972630}
-  deathSound: {fileID: 8300000, guid: 583f2fbb0b0f45642ad55263c3dd6b70, type: 3}
 --- !u!1 &2307900927600617600
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +330,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 697682191857345388, guid: 2227e93d284a6304389c03c33f07271b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -422,7 +421,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 15
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 697682191857345388, guid: 2227e93d284a6304389c03c33f07271b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

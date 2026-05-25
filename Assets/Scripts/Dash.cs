@@ -6,7 +6,7 @@ public class Dash : MonoBehaviour
     public float dashSpeed = 20f;       // Dash speed
     public float dashDistance = 5f;     // Dash distance
     public float dashCooldown = 2f;     // Cooldown duration
-
+    public ParticleSystem dashPartickle;
     private Rigidbody2D rb;
     private bool canDash = true;
     public bool movementEnable = true;
@@ -33,6 +33,7 @@ public class Dash : MonoBehaviour
 
     void StartDash()
     {
+        dashPartickle.Play();
         canDash = false;
 
         float horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -50,6 +51,7 @@ public class Dash : MonoBehaviour
 
     void EndDash()
     {
+        dashPartickle.Stop();
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         movementEnable = true;
     }
