@@ -10289,6 +10289,7 @@ MonoBehaviour:
   skipTimes:
   - 9
   - 5
+  timelineSkipped: 0000
 --- !u!4 &1604991518
 Transform:
   m_ObjectHideFlags: 0

@@ -509,6 +509,7 @@ MonoBehaviour:
   - 6
   - 5
   - 9
+  timelineSkipped: 000101
 --- !u!4 &30488261
 Transform:
   m_ObjectHideFlags: 0

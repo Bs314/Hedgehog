@@ -69019,7 +69019,7 @@ MonoBehaviour:
   timelines:
   - {fileID: 156114248}
   skipTimes:
-  - 7
+  - 26
 --- !u!4 &2141924086
 Transform:
   m_ObjectHideFlags: 0
